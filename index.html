@@ -62,8 +62,9 @@
         <div class="lg:w-[25%] border border-none mx-auto flex justify-center">
            
             <div class="space-x-3">
-                <button class="btn bg-[#11111117] px-8 text-lg font-semibold text-tprimary" id="donation-btn">Donation</button>
-                <button class="btn bg-[#11111117] text-[#1111119d] px-8 text-lg font-semibold " id="donation-history" onclick="displayHistory()">History</button>
+                <button class="btn bg-primary text-[#111111] px-8 text-lg font-semibold " id="donation-btn">Donation</button>
+
+                <button id="donation-history" class="btn bg-[#11111117] text-[#111111] px-8 text-lg font-semibold" onclick="displayHistory()">History</button>
                 
             </div>
         </div>
@@ -86,7 +87,7 @@
                     <span id="noakhali_donation_amount">0</span>
                     <span>BDT</span>
                 </button>
-                <h1 class="text-xl font-semibold text-tprimary">Donate for Flood at Noakhali, Bangladesh</h1>
+                <h1 class="text-xl font-semibold text-tprimary" id="donate_title">Donate for Flood at Noakhali, Bangladesh</h1>
                 <p class="text-md font-light text-[#1111119d]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                 <div>
                     <input
@@ -96,7 +97,7 @@
                      class="input input-bordered input-md w-full " />
                 
                 </div>
-                <button onclick="handleDonation('noakahli_donate_field', 'noakhali_donation_amount', 'noakhali_modal')" class="btn w-full bg-primary text-tprimary border-none text-lg font-semibold">Donate Now</button>
+                <button onclick ="handleDonation('noakahli_donate_field', 'noakhali_donation_amount', 'noakhali_modal', 'Flood at Noakhali, Bangladesh')" class="btn w-full bg-primary text-tprimary border-none text-lg font-semibold">Donate Now</button>
 
                    <!-- modal -->
 
@@ -142,7 +143,7 @@
                 
                 </div>
                 <div>
-                <button onclick="handleDonation('feni_donate_field', 'feni_donation_amount', 'feni_modal')" class=" btn w-full bg-primary text-tprimary border-none text-lg font-semibold">Donate Now</button>
+                <button onclick="handleDonation('feni_donate_field', 'feni_donation_amount', 'feni_modal', 'Flood Relief in Feni, Bangladesh')" class=" btn w-full bg-primary text-tprimary border-none text-lg font-semibold">Donate Now</button>
 
                 <!-- modal -->
 
@@ -190,7 +191,7 @@
                      class="input input-bordered input-md w-full " />
                 
                 </div>
-                <button onclick="handleDonation('quota_donate_field', 'quota_donation_amount', 'quota_modal')" class="btn w-full bg-primary text-tprimary border-none text-lg font-semibold">Donate Now</button>
+                <button onclick="handleDonation('quota_donate_field', 'quota_donation_amount', 'quota_modal', 'Aid for Injured in the Quota Movement')" class="btn w-full bg-primary text-tprimary border-none text-lg font-semibold">Donate Now</button>
 
                         <!-- modal -->
 
@@ -210,10 +211,6 @@
                   </dialog>
 
                 <div>
-                 
-               
-                    
-                
                 </div>
             </div>
         </div>
@@ -229,6 +226,8 @@
 
   <script src="./js/index.js"></script>
   <script src="./js/toggole.js"></script>
+  <!-- <script src="./js/test.js"></script> -->
+   
 
 </body>
 </html>
