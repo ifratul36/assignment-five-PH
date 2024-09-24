@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+     <!-- daisyUI && TailwindCSS link -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+ 
+     <!-- google font link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+     <!-- google font Lexend -->
+     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+     
+ 
+     <style>
+         .lexend {
+               font-family: "Lexend", sans-serif;
+             }
+     </style>
+ 
+  <script>
+     tailwind.config = {
+       theme: {
+         extend: {
+           colors: {
+             primary: '#B4F461',
+             secondary:'#1111114D',
+             tprimary:'#111111',
+           }
+         }
+       }
+     }
+   </script>
+</head>
+<body>
+    <header class= "bg-[#F9F7F3]  p-4 sticky top-0 w-full z-10">
+        <!-- navbar section starts here -->
+
+        <nav class="flex flex-col-reverse items-center gap-4 w-11/12 mx-auto">
+            <button class="btn bg-primary text-tprimary text-xl font-semibold px-8 border-none">Blog</button>
+            <h1 class="flex items-center gap-2"  onclick="window.location.href = './index.html'";>
+                <img src="./assets/logo.png" alt=""> <span class="text-xl font-semibold text-tprimary">Donate Bangladesh</span>
+            </h1>
+            <button class="lg:flex hidden items-center gap-1 font-semibold text-lg text-[#11111db6]">
+                <img src="./assets/coin.png" alt="">
+                <span>55000</span>
+                <span>BDT</span>
+            </button>
+        </nav>
+        <!-- navbar section ends here -->
+       
+    </header>
+    <!-- button section starts here -->
+    <section class="shadow-xl p-4 sticky top-20 z-10 w-full bg-white">
+        
+      <div class="lg:w-[25%] border border-none mx-auto flex justify-center">
+         
+          <div class="space-x-3">
+              <button class="btn bg-[#11111117] px-8 text-lg font-semibold text-tprimary" id="donation-btn">Donation</button>
+              <button class="btn bg-[#11111117] text-[#1111119d] px-8 text-lg font-semibold " id="donation-history" onclick="displayHistory()">History</button>
+              
+          </div>
+      </div>
+  </section>
+  <!-- button section ends here -->
+
+
+    <main class="mt-4 mb-4 p-6">
+        <h1 class="flex items-center text-2xl font-semibold text-tprimary gap-2 mb-7">Important FAQ 
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                  </svg>
+                  
+            </span>
+       </h1>
+         
+       <section>
+        <!-- first question -->
+        <div tabindex="0" class="collapse collapse-arrow border rounded-t-lg rounded-none">
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM) ?</div>
+            <div class="collapse-content lg:w-[70%]">
+              <p>The Document Object Model (DOM) is a programming interface that represents a web document as a tree of objects, allowing developers to dynamically manipulate its content, structure, and style using languages like JavaScript.</p>
+            </div>
+        </div>
+        <!-- second question -->
+        <div tabindex="0" class="collapse collapse-arrow border rounded-none">
+            <div class="collapse-title text-xl font-medium ">How do you select an elemnet from the DOM ?</div>
+            <div class="collapse-content lg:w-[70%] ">
+              <p class="space-y-4">  <span class="text-md font-semibold text-tprimarys">To select an element from the DOM, you can use the following methods: </span><br>
+
+                1. document.getElementById(id): Selects an element by its unique ID. <br>
+                
+                <span class="text-md font-semibold text-tprimarys">Example</span>: const element = document.getElementById('myId'); <br>
+                2. document.querySelector(selector): Selects the first element that matches a specified CSS selector.</p>
+            </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-arrow rounded-none border">
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and is it useful ?</div>
+            <div class="collapse-content lg:w-[70%]">
+              <p>Event delegation is a technique in the DOM that involves attaching a single event listener to a parent element to manage events for its child elements, improving performance and simplifying code, especially when dealing with dynamic content.</p>
+            </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-arrow border rounded-b-lg rounded-none">
+            <div class="collapse-title text-xl font-medium">How do you manipulate an elements attributes and styles using the DOM  ?</div>
+            <div class="collapse-content lg:w-[70%]">
+              <p>  To manipulate an element's attributes using element.setAttribute(), element.getAttribute(), and element.removeAttribute(), while styles can be modified with element.style.propertyName = value, allowing dynamic updates to an element's appearance and behavior in the DOM.</p>
+            </div>
+        </div>
+       </section>
+
+    </main>
+</body>
+</html>
